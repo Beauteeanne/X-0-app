@@ -1,29 +1,21 @@
-# str1 = input("Enter a word: ")
-# str2 = input("Enter another word: ")
-# sorted_str1 = sorted(str1)
-# sorted_str2 = sorted(str2)
-#
-# if len(str1) == len(str2):
-#     if sorted_str1 == sorted_str2:
-#         print("true")
-#     else:
-#         print("false")
 
 import random
 myList = ["R", "S", "P"]
-r = input("Choose a letter from myList: ")
+user_action = input("Choose a letter from the list (R, P, S): ")
+computer_action = random.choice(myList)
+def my_function(user_action):
 
-sample_list = random.choice(myList)
-
-def my_function(r):
-    for x in r:
-        if( "sample_list == r"):
-            print("Rock beats scissors")
-        elif("r == sample_list"):
-            print("Scissors beats paper")
-        else:
-            ("paper beats scissors")
-my_function(r)
+        if user_action == computer_action:
+            print("It's a tie")
+        if user_action != myList:
+             print('Error')
+             if computer_action == "R" and user_action == "S":
+                 print("Rock beats Scissors")
+             elif user_action == "S" and computer_action == "P":
+                 print("Scissors beats Paper")
+                 if user_action == "P" and computer_action == "R":
+                    print("Paper beats Rock")
+my_function(user_action)
 
 
 
